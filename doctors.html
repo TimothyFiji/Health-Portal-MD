@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fiji Health Portal - Doctors</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <!-- Nav Dropdown -->
+    <ul id='navDropdown' class='dropdown-content navDropdown'>
+      <li><a href="accountsettings.html">Account Settings</a></li>
+      <li><a href="activitylog.html">Activity Log</a></li>
+      <li class="divider"></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="supportinbox.html">Support Inbox</a></li>
+      <li><a href="report.html">Report a Problem</a></li>
+      <li class="divider"></li>
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+
+    <div class="navbar-fixed">
+      <nav class="teal">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo thin">Fiji Health Portal</a>
+          <a href="#" data-activates="main-sidebar" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <!-- <li><a href="#" id="datetime"></a></li> -->
+            <!-- <li><input id="searchfilter" type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></li> -->
+            <!-- <li><a href="#"><i class="material-icons">search</i></a></li> -->
+            <li><a class="dropdown-button" href="#" data-activates='navDropdown'><i class="material-icons">more_vert</i></a></li>
+          </ul>
+
+
+          <!-- Main Sidebar -->
+          <ul id="main-sidebar" class="side-nav fixed mainsidebar">
+            <a href="dashboard.html"><li><i class="material-icons left black-text side-nav-icons">dashboard</i> Dashboard</li></a>
+            <a href="doctors.html"><li><img src="assets/images/phonendoscope.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Doctors</li></a>
+            <a href="nurses.html"><li><img src="assets/images/nurse-silhouette.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Nurses</li></a>
+            <li class="no-padding" style="border-bottom:none !important;">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <a class="collapsible-header accountingDropdown"><img src="assets/images/patient.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Patients</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="patients.html"><i class="material-icons left">keyboard_arrow_right</i> Patient Listing</a></li>
+                      <li><a href="admitted.html"><i class="material-icons left">keyboard_arrow_right</i> Admitted Patients</a></li>
+                      <li><a href="addpatient.html"><i class="material-icons left">add</i> New Patient</a></li>
+                      <li><a href="patientreports.html"><i class="material-icons left">keyboard_arrow_right</i> Reports</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <a href="inventory.html"><li><i class="material-icons left black-text side-nav-icons">assignment</i> Inventory</li></a>
+            <a href="medicine"><li><img src="assets/images/pills-bottle.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Medicine</li></a>
+            <a href="records.html"><li><i class="material-icons left black-text side-nav-icons">folder</i> Records</li></a>
+            <a href="intercom.html"><li><i class="material-icons left black-text side-nav-icons">record_voice_over</i> Intercom</li></a>
+          </ul>
+      </nav>
+    </div>
+
+    <main class="main-content">
+
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <h2 class="thin">Doctors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <table class="order-table table striped centered">
+           <thead>
+             <tr>
+                 <th data-field="id">#</th>
+                 <th data-field="name">Name</th>
+                 <th data-field="department">Department</th>
+                 <th data-field="status">Status</th>
+                 <th data-field="edit">Settings</th>
+             </tr>
+           </thead>
+
+           <tbody>
+             <tr>
+               <td>1</td>
+               <td><a href="#">Timothy Ah Koy</a></td>
+               <td><a href="#">Emergency</a></td>
+               <td><i class="material-icons green-text text-darken-2 status-active">fiber_manual_record</i> <a href="#" class="hide-on-small-only	">Active</a></td>
+               <td><a href="#">edit</a></td>
+             </tr>
+             <tr>
+               <td>2</td>
+               <td><a href="#">Samu Vasu</a></td>
+               <td><a href="#">X-Ray</a></td>
+               <td><i class="material-icons green-text text-darken-2 status-active">fiber_manual_record</i> <a href="#" class="hide-on-small-only">Active</a></td>
+               <td><a href="#">edit</a></td>
+             </tr>
+             <tr>
+               <td>3</td>
+               <td><a href="#">Sheetal Renu</a></td>
+               <td><a href="#">Surgical</a></td>
+               <td><i class="material-icons green-text text-darken-2 status-active">fiber_manual_record</i> <a href="#" class="hide-on-small-only">Active</a></td>
+               <td><a href="#">edit</a></td>
+             </tr>
+           </tbody>
+         </table>
+        </div>
+      </div>
+    </main>
+    <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+  </body>
+</html>

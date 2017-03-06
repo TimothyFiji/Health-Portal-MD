@@ -1,0 +1,85 @@
+body{
+  background-color: #fafafa;
+}
+
+.leftcol{
+  height: 100vh;
+  background: url(../images/bg1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.rightcol{
+  height: 100vh;
+}
+
+.nomargin{
+  margin: 0px;
+}
+
+.brand-logo{
+  padding-left: 15px !important;
+}
+
+.navDropdown{
+  width: 200px;
+}
+
+header, main, footer {
+     padding-left: 240px;
+}
+
+.side-nav{
+  margin-top: 64px;
+}
+
+.side-nav li{
+  border-bottom: 1px solid rgba(51, 51, 51, 0.05);
+}
+
+@media only screen and (max-width : 992px) {
+ header, main, footer {
+   padding-left: 0;
+ }
+
+ .side-nav{
+   margin-top: 56px;
+}
+
+}
+
+.mainsidebar a{
+  padding: 0px !important;
+}
+
+.side-nav-icons{
+  padding-left: 0px;
+}
+
+.nav_icons{
+  margin-right: 15px;
+}
+
+.main-content{
+  /*margin: 50px;*/
+}
+
+.status-active{
+  position: relative;
+  top: 7px;
+}
+
+.side-nav .collapsible-body li a{
+  margin: 0px !important;
+  padding-left: 30px !important;
+}
+
+.infolables{
+  width: 100px;
+}
+
+.custom-collapsible{
+  box-shadow: none !important;
+}

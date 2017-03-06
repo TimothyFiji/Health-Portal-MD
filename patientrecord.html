@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fiji Health Portal - Patient Record</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <!-- Top nav links Dropdown -->
+    <ul id='navDropdown' class='dropdown-content navDropdown'>
+      <li><a href="accountsettings.html">Account Settings</a></li>
+      <li><a href="activitylog.html">Activity Log</a></li>
+      <li class="divider"></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="supportinbox.html">Support Inbox</a></li>
+      <li><a href="report.html">Report a Problem</a></li>
+      <li class="divider"></li>
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+
+    <div class="navbar-fixed">
+      <nav class="teal">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo thin">Fiji Health Portal</a>
+          <a href="#" data-activates="main-sidebar" class="button-collapse"><i class="material-icons">menu</i></a>
+          <!-- Top menu links -->
+          <ul class="right hide-on-med-and-down">
+            <!-- <li><a href="#" id="datetime"></a></li> -->
+            <!-- <li><input id="searchfilter" type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></li> -->
+            <!-- <li><a href="#"><i class="material-icons">search</i></a></li> -->
+            <li><a class="dropdown-button" href="#" data-activates='navDropdown'><i class="material-icons">more_vert</i></a></li>
+          </ul>
+          <!-- Top menu links -->
+          <!-- Main Sidebar -->
+          <ul id="main-sidebar" class="side-nav fixed mainsidebar">
+            <a href="dashboard.html"><li><i class="material-icons left black-text side-nav-icons">dashboard</i> Dashboard</li></a>
+            <a href="doctors.html"><li><img src="assets/images/phonendoscope.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Doctors</li></a>
+            <a href="nurses.html"><li><img src="assets/images/nurse-silhouette.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Nurses</li></a>
+            <li class="no-padding" style="border-bottom:none !important;">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <a class="collapsible-header accountingDropdown"><img src="assets/images/patient.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Patients</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="patients.html"><i class="material-icons left">keyboard_arrow_right</i> Patient Listing</a></li>
+                      <li><a href="admitted.html"><i class="material-icons left">keyboard_arrow_right</i> Admitted Patients</a></li>
+                      <li><a href="addpatient.html"><i class="material-icons left">add</i> New Patient</a></li>
+                      <li><a href="patientreports.html"><i class="material-icons left">keyboard_arrow_right</i> Reports</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <a href="inventory.html"><li><i class="material-icons left black-text side-nav-icons">assignment</i> Inventory</li></a>
+            <a href="medicine"><li><img src="assets/images/pills-bottle.svg" height="56px" width="30px" class="left side-nav-icons nav_icons"/> Medicine</li></a>
+            <a href="records.html"><li><i class="material-icons left black-text side-nav-icons">folder</i> Records</li></a>
+            <a href="intercom.html"><li><i class="material-icons left black-text side-nav-icons">record_voice_over</i> Intercom</li></a>
+          </ul>
+          <!-- End main sidebar -->
+        </div>
+        <!-- End nav wrapper -->
+      </nav>
+      <!-- End Nav -->
+    </div>
+
+    <main class="main-content">
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card-panel white">
+            <div class="row">
+              <div class="col s12 m6 l6">
+                <div class="patientinfo">
+                  Name: Timothy Ah Koy
+                </div>
+                <div class="patientinfo">
+                  Sex: Male
+                </div>
+                <div class="patientinfo">
+                  Age: 23 (18/08/1992)
+                </div>
+              </div>
+              <div class="col s12 m6 l6">
+                <h6 class="right"><b>Id: 0321</b></h6>
+              </div>
+            </div>
+            <div class="divider"></div></br>
+            <div class="row">
+              <div class="col s12 teal-text text-darken-2">
+                <ul class="tabs">
+                  <li class="tab col s3"><a class="active" href="#history">History</a></li>
+                  <li class="tab col s3"><a href="#general">General</a></li>
+                  <li class="tab col s3"><a href="#photos">Photos</a></li>
+                  <li class="tab col s3"><a href="#appointments">Appointments</a></li>
+                  <li class="tab col s3"><a href="#visits">Visits</a></li>
+                  <li class="tab col s3"><a href="#medication">Medication</a></li>
+                  <li class="tab col s3"><a href="#imaging">Imaging</a></li>
+                  <li class="tab col s3"><a href="#labs">Labs</a></li>
+                  <li class="tab col s3"><a href="#socialwork">Socialwork</a></li>
+                </ul>
+              </div>
+
+              <!-- History Tab -->
+              <div id="history" class="col s12">
+                <br />
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#addnewnote"><i class="material-icons right">add</i>New Note</a>
+                <div style="clear: both;"></div>
+                <ul class="collapsible custom-collapsible" data-collapsible="expandable">
+                  <li>
+                    <div class="collapsible-header active"><b>03/04/2016</b> - Clinic</div>
+                    <div class="collapsible-body">
+                      <p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header"><b>20/03/2015</b> - Review</div>
+                    <div class="collapsible-body">
+                      <p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                      <div class="row">
+                        <div class="col s12 m6 l3">
+                            <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                        </div>
+                        <div class="col s12 m6 l3">
+                            <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                        </div>
+                        <div class="col s12 m6 l3">
+                            <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                        </div>
+                        <div class="col s12 m6 l3">
+                            <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header"><b>11/06/2014</b> - Admission</div>
+                    <div class="collapsible-body"><p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.</p></div>
+                  </li>
+                </ul>
+                <div class="right">
+                  <a class="waves-effect waves-light btn">Update</a> <a class="waves-effect red darken-2 waves-light btn">Cancel</a>
+                </div>
+              </div>
+              <!-- End History Tab -->
+
+              <!-- General Tab -->
+              <div id="general" class="col s12">
+                <br />
+                <a class="waves-effect waves-light btn right modal-trigger" href="#"><i class="material-icons right">add</i>Update</a>
+                <div style="clear: both;"></div>
+                <br />
+                <div class="row">
+                  <div class="col s12">
+                    <div class="">
+                      <form>
+                        <div class="row">
+                          <div class="col s12">
+                            <h5>General Details</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="First Name" id="firstname" type="number" class="validate">
+                            <label for="firstname">Firstname</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Middle Name" id="middlename" type="text" class="validate">
+                            <label for="middlename">Middle Name</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Last Name" id="lastname" type="text" class="validate">
+                            <label for="lastname">Last Name</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose your option</option>
+                              <option value="1">Male</option>
+                              <option value="2">Female</option>
+                            </select>
+                            <label>Sex</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input type="date" id="dob" class="datepicker">
+                            <label for="dob">Date of birth</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Religion" id="religion" type="text" class="validate">
+                            <label for="religion">Religion</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col s12">
+                            <h5>Medical Details</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input value="0012" id="id" type="number" class="validate">
+                            <label for="id">Id#</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Enter Id" id="externalid" type="text" class="validate">
+                            <label for="externalid">External Id</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Enter Clinic" id="clinicsite" type="text" class="validate">
+                            <label for="clinicsite">Clinic Site</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Enter Status" id="patient_status" type="text" class="validate">
+                            <label for="patient_status">Patient Status</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose blood type</option>
+                              <option value="1">A +</option>
+                              <option value="2">A -</option>
+                              <option value="2">AB -</option>
+                              <option value="2">AB +</option>
+                              <option value="2">B +</option>
+                              <option value="2">B -</option>
+                              <option value="2">O +</option>
+                              <option value="2">O -</option>
+                            </select>
+                            <label>Blood Type</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Dr." id="referedby" type="text" class="validate">
+                            <label for="referedby">Refered By</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input type="date" id="refereddate" class="datepicker">
+                            <label for="refereddate">Date of Referal</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose your option</option>
+                              <option value="1">Charity</option>
+                              <option value="2">Private</option>
+                            </select>
+                            <label>Patient Type</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose your option</option>
+                              <option value="1">Other</option>
+                              <option value="2">Pricelist</option>
+                            </select>
+                            <label>Payment profile</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col s12">
+                            <h5>Contact Details</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Number" id="phonecontact" type="number" class="validate">
+                            <label for="phonecontact">Phone Contact</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Enter email" id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea id="address" class="materialize-textarea"></textarea>
+                            <label for="address">Address</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="City" id="city" type="email" class="validate">
+                            <label for="city">City</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Number" id="province" type="number" class="validate">
+                            <label for="province">Province</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Country" id="country" type="email" class="validate">
+                            <label for="country">Country</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input placeholder="Enter name" id="parent_guardian" type="text" class="validate">
+                            <label for="parent_guardian">Parent/Guardian</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col s12">
+                            <button class="btn waves-effect waves-light right" type="submit" name="action">Update
+                              <i class="material-icons right">add</i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End general tab -->
+
+              <!-- Photos Tab -->
+              <div id="photos" class="col s12">
+                <br />
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#addnewphoto"><i class="material-icons right">add</i>Add Photo</a>
+                <div style="clear: both;"></div>
+                <br />
+                <div class="row">
+                  <div class="col s12 m6 l3">
+                      <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                  </div>
+                  <div class="col s12 m6 l3">
+                      <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                  </div>
+                  <div class="col s12 m6 l3">
+                      <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                  </div>
+                  <div class="col s12 m6 l3">
+                      <img class="responsive-img materialboxed" data-caption="Some caption here" src="assets/images/800x600.png">
+                  </div>
+                </div>
+              </div>
+              <!-- End photos tab -->
+
+              <!-- Appointment Tab -->
+              <div id="appointments" class="col s12">
+                <br />
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#addnewappointment"><i class="material-icons right">add</i>Add Appointment</a>
+                <div style="clear: both;"></div>
+                <br />
+                <table class="striped centered responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="date">Date</th>
+                        <th data-field="examiner">Examiner</th>
+                        <th data-field="location">Location</th>
+                        <th data-field="location">Type</th>
+                        <th data-field="location">Status</th>
+                        <th data-field="location">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>12/04/2011 - 13/04/2011</td>
+                      <td>Dr. Volibear</td>
+                      <td>CWM Hospital</td>
+                      <td>Clinic</td>
+                      <td>Scheduled</td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                    <tr>
+                      <td>05/06/2011 - 10/006/2011</td>
+                      <td>Dr. Teemo</td>
+                      <td>Navua Hospital</td>
+                      <td>Clinic</td>
+                      <td>Scheduled</td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End appointment tab -->
+
+              <!-- Visits tab -->
+              <div id="visits" class="col s12">
+                <br />
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#addnewvisit"><i class="material-icons right">add</i>New Visit</a>
+                <div style="clear: both;"></div>
+                <br />
+                <table class="striped centered responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="startdate">Start Date</th>
+                        <th data-field="enddate">End Date</th>
+                        <th data-field="diagnosis">Diagnosis</th>
+                        <th data-field="provider">Provider</th>
+                        <th data-field="location">Location</th>
+                        <th data-field="type">Type</th>
+                        <th data-field="action">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10/03/2015</td>
+                      <td>10/03/2015</td>
+                      <td>left, cubitus varus</td>
+                      <td>Dr. Teemo</td>
+                      <td>Navua Hospital</td>
+                      <td>Clinic</td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End visits tab -->
+
+              <!-- Medication Tab -->
+              <div id="medication" class="col s12">
+                <br />
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#newmedication"><i class="material-icons right">add</i>New Medication</a>
+                <div style="clear: both;"></div>
+                <br />
+                <table class="striped centered responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="medicaitondate">Date</th>
+                        <th data-field="medicationname">Name</th>
+                        <th data-field="medicationstatus">Status</th>
+                        <th data-field="medicaitonprescription">Prescription</th>
+                        <th data-field="medicationrequestby">Requested By</th>
+                        <th data-field="medicationaction">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>5/20/2016</td>
+                      <td>Thiopental 1g vial(Penthal)</td>
+                      <td>Requested</td>
+                      <td>1 injection daily every 8 hours daily</td>
+                      <td>Dr. Volibear</td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End medication tab -->
+
+              <!-- Imaging Tab -->
+              <div id="imaging" class="col s12">
+                <br />
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#newimaging"><i class="material-icons right">add</i>New Imaging</a>
+                <div style="clear: both;"></div>
+                <br />
+                <table class="striped centered responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="imagingdaterequested">Date Requested</th>
+                        <th data-field="imagingtype">Imaging Type</th>
+                        <th data-field="imagingstatus">Status</th>
+                        <th data-field="imagingdateprocessed">Date Processed</th>
+                        <th data-field="imagingresult">Result</th>
+                        <th data-field="imagingnotes">Notes</th>
+                        <th data-field="imagingrequestedby">Requested By</th>
+                        <th data-field="imagingactions">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>05/20/2016</td>
+                      <td>Ankle (Any Single View)</td>
+                      <td>Requested</td>
+                      <td></td>
+                      <td></td>
+                      <td>Extreme ankle fracture</td>
+                      <td>Dr. Volibear</td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Imaging Tab -->
+
+              <!-- Labs tab -->
+              <div id="labs" class="col s12">
+                <br />
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#newlab"><i class="material-icons right">add</i>New Lab</a>
+                <div style="clear: both;"></div>
+                <br />
+                <table class="striped centered responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="imagingdaterequested">Date Requested</th>
+                        <th data-field="imagingtype">Lab Type</th>
+                        <th data-field="imagingstatus">Status</th>
+                        <th data-field="imagingdateprocessed">Date Processed</th>
+                        <th data-field="imagingresult">Result</th>
+                        <th data-field="imagingnotes">Notes</th>
+                        <th data-field="imagingrequestedby">Requested By</th>
+                        <th data-field="imagingactions">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>05/20/2016</td>
+                      <td>Cancer Check</td>
+                      <td>Requested</td>
+                      <td></td>
+                      <td></td>
+                      <td>Just a short note here</td>
+                      <td>Dr. Volibear</td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End labs tab -->
+
+              <!-- Social Work Tab -->
+              <div id="socialwork" class="col s12">
+                <br />
+                <h5 class="left">Family Information</h5>
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#addfamilymember"><i class="material-icons right">add</i>Add Family Member</a>
+                <div style="clear: both;"></div>
+                <br />
+                <table class="striped centered responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="socialworkname">Name</th>
+                        <th data-field="socialworkage">Age</th>
+                        <th data-field="socialworkcivilstatus">Civil Status</th>
+                        <th data-field="socialworkrelationtopatient">Relation to Patient</th>
+                        <th data-field="socialworkeducation">Education</th>
+                        <th data-field="socialworkoccupation">Occupation</th>
+                        <th data-field="socialworkincome">Income</th>
+                        <th data-field="socialworkinsurance">Insurance</th>
+                        <th data-field="socialworkaction">Action</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Peter</td>
+                      <td>60</td>
+                      <td>Citizen</td>
+                      <td>Father</td>
+                      <td>Diploma</td>
+                      <td>Pastor</td>
+                      <td>$0.00</td>
+                      <td></td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br />
+                <br />
+                <h5 class="left">Expenses </h5>
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn right modal-trigger" href="#addexpense"><i class="material-icons right">add</i>Add Expense</a>
+                <div style="clear: both;"></div>
+                <br />
+                <table class="striped centered responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="expensescategory">Category</th>
+                        <th data-field="expensessources">Sources</th>
+                        <th data-field="expensesmonthcost">Monthly Cost</th>
+                        <th data-field="expensesaction">Action</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Bills</td>
+                      <td>Electricty</td>
+                      <td>$120</td>
+                      <td><a class="blue-grey-text blue-grey-darken-2" href="#">EDIT</a> | <a class="red-text red-darken-2" href="#">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <!-- End social work tab -->
+            </div>
+          </div>
+          <!-- End card panel -->
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </main>
+
+    <!-- Add new note modal -->
+    <div id="addnewnote" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>New Note for Timothy Ah Koy</h5>
+        <div class="divider"></div>
+        <form>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="note" class="materialize-textarea"></textarea>
+              <label for="note">Note</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">03/04/2016 - Clinic</option>
+                <option value="2">20/03/2015 - Review</option>
+                <option value="3">11/06/2014 - Admission</option>
+              </select>
+              <label>Materialize Select</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Dr." id="onbehalf" type="text" class="validate" name="onbehalf" list="drlist">
+              <label for="onbehalf">On Behalf Of</label>
+              <datalist id="drlist">
+                <option value="Dr. Joe">
+                <option value="Dr. Smith">
+                <option value="Dr. Teemo">
+                <option value="Dr. Voli">
+                <option value="Dr. Kennen">
+              </datalist>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new note modal -->
+
+    <!-- Add new photo modal -->
+    <div id="addnewphoto" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>New Photo for Timothy Ah Koy</h5>
+        <div class="divider"></div>
+        <form>
+          <div class="row">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>File</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="photodetails" class="materialize-textarea"></textarea>
+              <label for="photodetails">Photo Details</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose date</option>
+                <option value="1">03/04/2016 - Clinic</option>
+                <option value="2">20/03/2015 - Review</option>
+                <option value="3">11/06/2014 - Admission</option>
+              </select>
+              <label>Attach to Review</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Dr." id="onbehalf" type="text" class="validate" name="onbehalf" list="drlist">
+              <label for="onbehalf">On Behalf Of</label>
+              <datalist id="drlist">
+                <option value="Dr. Joe">
+                <option value="Dr. Smith">
+                <option value="Dr. Teemo">
+                <option value="Dr. Voli">
+                <option value="Dr. Kennen">
+              </datalist>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new photo modal -->
+
+    <!-- Add new appointment modal -->
+    <div id="addnewappointment" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>New Appointment for Timothy Ah Koy</h5>
+        <div class="divider"></div>
+        <form>
+          <div class="row">
+            <div class="input-field col s6 m6 l6">
+              <input type="date" id="startdate" class="datepicker">
+              <label for="startdate">Start Date</label>
+            </div>
+            <div class="input-field col s6 m6 l6">
+              <input type="date" id="enddate" class="datepicker">
+              <label for="enddate">End Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+                <input type="checkbox" class="filled-in" id="allday" />
+                <label for="allday">All Day Event</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Appointment Type</option>
+                <option value="1">Admission</option>
+                <option value="2">Clinic</option>
+                <option value="3">Followup</option>
+                <option value="4">Imaging</option>
+                <option value="5">Lab</option>
+                <option value="6">Pharmacy</option>
+              </select>
+              <label>Type</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Appointment Location</option>
+                <option value="1">CWM Hospital</option>
+                <option value="2">Suva Private Hospital</option>
+                <option value="3">Rawai Clinic</option>
+                <option value="4">Samabula Clinic</option>
+                <option value="5">Navua Hospital</option>
+                <option value="6">Lautoka Hospital</option>
+              </select>
+              <label>Location</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Appointment Status</option>
+                <option value="1">Scheduled</option>
+                <option value="2">Canceled</option>
+                <option value="3">Missed</option>
+              </select>
+              <label>Status</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="newappointmentnotes" class="materialize-textarea"></textarea>
+              <label for="newappointmentnotes">Notes</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new appointment modal -->
+
+
+    <!-- Add new visit modal -->
+    <div id="addnewvisit" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>New Visit for Timothy Ah Koy</h5>
+        <div class="divider"></div>
+        <form>
+          <div class="row">
+            <div class="input-field col s6 m6 l6">
+              <input type="date" id="admissiondate" class="datepicker">
+              <label for="admissiondate">Admission Date</label>
+            </div>
+            <div class="input-field col s6 m6 l6">
+              <input type="date" id="dischargedate" class="datepicker">
+              <label for="dischargedate">Discharge Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Location</option>
+                <option value="1">CWM Hospital</option>
+                <option value="2">Suva Private Hospital</option>
+                <option value="3">Rawai Clinic</option>
+                <option value="4">Samabula Clinic</option>
+                <option value="5">Navua Hospital</option>
+                <option value="6">Lautoka Hospital</option>
+              </select>
+              <label>Location</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Examiner</option>
+                <option value="1">Dr. Teemo</option>
+                <option value="2">Dr. Volibear</option>
+                <option value="3">Dr. Naut</option>
+                <option value="4">Dr. Lee</option>
+                <option value="5">Dr. Darius</option>
+              </select>
+              <label>Examiner</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Visit Type</option>
+                <option value="1">Admission</option>
+                <option value="2">Clinic</option>
+                <option value="3">Followup</option>
+                <option value="4">Imaging</option>
+                <option value="5">Lab</option>
+                <option value="6">Pharmacy</option>
+              </select>
+              <label>Type</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Visit Status</option>
+                <option value="1"></option>
+                <option value="2">Admitted</option>
+                <option value="3">Discharged</option>
+              </select>
+              <label>Status</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <input placeholder="Placeholder" id="admittingdiagnosis" type="text" class="validate">
+              <label for="admittingdiagnosis">Admitting Diagnosis</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="" disabled selected>Select Billing</option>
+                <option value="2">Free</option>
+                <option value="3">A-1</option>
+                <option value="3">A-2</option>
+                <option value="3">B-1</option>
+                <option value="3">B-2</option>
+                <option value="3">C-1</option>
+                <option value="3">C-2</option>
+              </select>
+              <label>Final/Billing Diagnosis</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="patienthistory" class="materialize-textarea"></textarea>
+              <label for="patienthistory">Patient History</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="historylastseen" class="materialize-textarea"></textarea>
+              <label for="historylastseen">History since last seen</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new visit modal -->
+
+    <!-- Add new medication modal -->
+    <div id="newmedication" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>New Medication for Timothy Ah Koy</h5>
+        <div class="divider"></div>
+        <form>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="1">Add New Out Patient Visit</option>
+                <option value="2">20/05/2016</option>
+                <option value="3">08/03/2016</option>
+                <option value="4">05/01/2016</option>
+              </select>
+            </div>
+            <div class="input-field col s6 m6 l6">
+              <input type="date" id="medicationprescriptiondate" class="datepicker">
+              <label for="medicationprescriptiondate">Prescription Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <input placeholder="Placeholder" id="medicationtype" type="text" class="validate">
+              <label for="medicationtype">Medication</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="prescription" class="materialize-textarea"></textarea>
+              <label for="prescription">Prescription</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6 m12 l12">
+              <input type="date" id="medicationprescriptiondate" class="datepicker">
+              <label for="medicationprescriptiondate">Prescription Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="medicationquantityrequseted" type="number" class="validate">
+              <label for="medicationquantityrequseted">Medication Quantity</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="medicationrefills" type="number" class="validate">
+              <label for="medicationrefills">Medication Refills</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new medication modal -->
+
+
+    <!-- Add new imaging modal -->
+    <div id="newimaging" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>New Imaging for Timothy Ah Koy</h5>
+        <div class="divider"></div>
+        <form>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="1">Add New Visit</option>
+                <option value="2">20/05/2016</option>
+                <option value="3">08/03/2016</option>
+                <option value="4">05/01/2016</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m6 l3">
+              <input type="checkbox" id="ankle" class="filled-in"/>
+              <label for="ankle">Ankle (Any Single View)</label>
+            </div>
+            <div class="col s12 m6 l3">
+              <input type="checkbox" id="ankleap-l" class="filled-in"/>
+              <label for="ankleap-l">Ankle AP-L</label>
+            </div>
+            <div class="col s12 m6 l3">
+              <input type="checkbox" id="cervicalspine" class="filled-in"/>
+              <label for="cervicalspine">Cervical Spine (Any Single View)</label>
+            </div>
+            <div class="col s12 m6 l3">
+              <input type="checkbox" id="cervicalspineap" class="filled-in"/>
+              <label for="cervicalspineap">Cervical Spine AP-L</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="imagingnotes" class="materialize-textarea"></textarea>
+              <label for="imagingnotes">Imaging Notes</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new imaging modal -->
+
+    <!-- Add new family member modal -->
+    <div id="addfamilymember" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>Family Member Info</h5>
+        <div class="divider"></div>
+        </br>
+        <form>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fmname" type="text" class="validate">
+              <label for="fmname">Name</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fmage" type="text" class="validate">
+              <label for="fmage">Age</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fmcivilstat" type="text" class="validate">
+              <label for="fmcivilstat">Civil Status</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fmrelationtp" type="text" class="validate">
+              <label for="fmrelationtp">Relationship to Patient</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fmeducation" type="text" class="validate">
+              <label for="fmeducation">Education</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fmoccupation" type="text" class="validate">
+              <label for="fmoccupation">Occupation</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fmincome" type="text" class="validate">
+              <label for="fmincome">Income</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="fminsurance" type="text" class="validate">
+              <label for="fminsurance">Insurance</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new family member modal -->
+
+    <!-- Add new expense modal -->
+    <div id="addexpense" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h5>Add Expense</h5>
+        <div class="divider"></div>
+        </br>
+        <form>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <select>
+                <option value="1">Category</option>
+                <option value="2">Clothing</option>
+                <option value="3">Education</option>
+                <option value="4">Electricity</option>
+                <option value="4">Food</option>
+                <option value="4">Fuel</option>
+                <option value="4">Other</option>
+                <option value="4">Rent</option>
+                <option value="4">Transportation</option>
+                <option value="4">Water</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="expensesources" type="text" class="validate">
+              <label for="fmname">Sources</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <input placeholder="Placeholder" id="expensecost" type="number" class="validate">
+              <label for="fmage">Cost</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit" name="action">Cancel</a><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Add</a>
+      </div>
+    </div>
+    <!-- End new expense modal -->
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+  </body>
+</html>
